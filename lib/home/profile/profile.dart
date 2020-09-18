@@ -128,7 +128,7 @@ class _ProfileState extends State<Profile> {
             Text(
               'App Development',
               style: TextStyle(
-                color: Colors.grey[700],
+                color: Colors.grey[300],
                 fontSize: 21,
                 fontWeight: FontWeight.w400,
               ),
@@ -137,7 +137,7 @@ class _ProfileState extends State<Profile> {
             Text(
               '2nd Year IT',
               style: TextStyle(
-                color: Colors.grey[700],
+                color: Colors.grey[300],
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
               ),
@@ -199,8 +199,18 @@ class _ProfileState extends State<Profile> {
                       elementText('5'),
                     ],
                   )),
-                  element(elementText(
-                      'For more information on projects visit Github')),
+                  element(Row(
+                    children: [
+                      elementText('For more information visit '),
+                      GestureDetector(
+                        onTap: () {
+                          _urllaunch(
+                              'https://github.com/aprajain?tab=repositories');
+                        },
+                        child: elementText('Github.'),
+                      ),
+                    ],
+                  )),
                 ],
               ),
             ),

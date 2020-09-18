@@ -58,8 +58,7 @@ class _AttendanceState extends State<Attendance> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          gradient: LinearGradient(
-                              colors: [Colors.blueGrey, Colors.grey])),
+                          color: Colors.grey[600]),
                       child: Center(
                         child: Text(
                           'MARK ATTENDANCE HERE',

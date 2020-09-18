@@ -4,6 +4,7 @@ import 'package:conatus/models/customcolor.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:conatus/sevices/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'attendance.dart';
 import 'profile/profile.dart';
@@ -46,13 +47,13 @@ class Home extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black),
           actions: <Widget>[
             FlatButton.icon(
-              icon: Icon(
-                Icons.settings,
-                size: 20,
-              ),
               label: Text(
                 'logout',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+              ),
+              icon: Icon(
+                FontAwesomeIcons.signOutAlt,
+                size: 20,
               ),
               onPressed: () async {
                 await _auth.signOut();

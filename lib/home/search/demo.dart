@@ -111,8 +111,20 @@ class DemoProfile extends StatelessWidget {
                     elementText(
                         'pursuing Bachelor of Technology from AKGEC  |  Java  |  C#  |  Flutter'),
                   ),
-                  element(elementText('Active Projects                  3')),
-                  element(elementText('Projects Completed          5')),
+                  element(Row(
+                    children: [
+                      elementText('Active Projects'),
+                      Spacer(),
+                      elementText('5')
+                    ],
+                  )),
+                  element(Row(
+                    children: [
+                      elementText('Projects Completed'),
+                      Spacer(),
+                      elementText('12'),
+                    ],
+                  )),
                   element(elementText(
                       'For more information on projects visit Github')),
                 ],

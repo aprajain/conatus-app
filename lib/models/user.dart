@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 var textDeco = InputDecoration(
   //hintText: 'Email',
   enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.grey[400], width: 2),
+    borderSide: BorderSide(color: Colors.grey[600], width: 2),
+    borderRadius: BorderRadius.all(Radius.circular(30)),
   ),
   focusedBorder: OutlineInputBorder(
     borderSide: BorderSide(color: Colors.black, width: 2),
+    borderRadius: BorderRadius.all(Radius.circular(30)),
   ),
 );
 

@@ -30,9 +30,9 @@ class _MenuState extends State<Menu> {
             ),
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                CustomColor.GREEN,
-                CustomColor.LBLUE,
-                CustomColor.BLUE
+                CustomColor.LTEAL,
+                CustomColor.DTEAL,
+                //CustomColor.BLUE
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
               color: Colors.black,
             ),

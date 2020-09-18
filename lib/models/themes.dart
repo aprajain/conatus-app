@@ -7,10 +7,13 @@ Widget bgTheme(Widget body) {
     padding: EdgeInsets.only(top: 90),
     height: double.infinity,
     decoration: BoxDecoration(
-      gradient: LinearGradient(
-          colors: [CustomColor.GREEN, CustomColor.LBLUE, CustomColor.BLUE],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight),
+      gradient: LinearGradient(colors: [
+        //CustomColor.BLUE,
+
+        CustomColor.LTEAL,
+        //CustomColor.BLUE,
+        CustomColor.DTEAL,
+      ], begin: Alignment.topLeft, end: Alignment.bottomRight),
       // borderRadius: BorderRadius.only(
       //     bottomLeft: Radius.elliptical(40, 20),
       //     bottomRight: Radius.elliptical(40, 20)),
