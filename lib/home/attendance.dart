@@ -1,4 +1,5 @@
 import 'package:conatus/models/appbar.dart';
+import 'package:conatus/models/bottomBar.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -44,7 +45,8 @@ class _AttendanceState extends State<Attendance> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: appBar(),
-        drawer: Menu(),
+        //drawer: Menu(),
+        bottomNavigationBar: BottomBar(),
         body: bgTheme(
           SingleChildScrollView(
             physics: BouncingScrollPhysics(),

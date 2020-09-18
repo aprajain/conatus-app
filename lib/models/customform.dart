@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 Widget head(title) {
-  return Text(title,
-      style: TextStyle(
-        color: Colors.blueGrey[700],
-        fontSize: 25,
-        fontWeight: FontWeight.w700,
-      ));
+  return Padding(
+    padding: const EdgeInsets.only(left: 10),
+    child: Text(title,
+        style: TextStyle(
+          color: Colors.blueGrey[700],
+          fontSize: 25,
+          fontWeight: FontWeight.w700,
+        )),
+  );
 }
 
 Widget textInput(String initialValue) {
@@ -16,7 +19,7 @@ Widget textInput(String initialValue) {
       primaryColorDark: Colors.red,
     ),
     child: TextFormField(
-      maxLength: 100,
+      maxLength: 20,
       style: TextStyle(fontSize: 22, color: Colors.black),
       keyboardType: TextInputType.text,
       initialValue: initialValue,

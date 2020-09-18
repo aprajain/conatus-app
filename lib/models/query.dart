@@ -16,14 +16,14 @@ class _QueryState extends State<Query> {
       extendBodyBehindAppBar: true,
       appBar: appBar(),
       body: bgTheme(
-        Padding(
-          padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              head('Question'),
-              SizedBox(height: 20),
-              element(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            head('Question'),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: element(
                 TextField(
                   maxLength: 200,
                   maxLines: 2,
@@ -34,10 +34,10 @@ class _QueryState extends State<Query> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              saveButton('Submit'),
-            ],
-          ),
+            ),
+            SizedBox(height: 20),
+            saveButton('Submit'),
+          ],
         ),
       ),
     );

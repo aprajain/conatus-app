@@ -1,4 +1,5 @@
 import 'package:conatus/models/appbar.dart';
+import 'package:conatus/models/bottomBar.dart';
 import 'package:conatus/models/custombutton.dart';
 import 'package:conatus/models/customcolor.dart';
 import 'package:conatus/models/themes.dart';
@@ -26,13 +27,6 @@ Widget menu(title, page, context) {
   );
 }
 
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
 class Home extends StatelessWidget {
   final AuthServices _auth = AuthServices();
 
@@ -41,6 +35,7 @@ class Home extends StatelessWidget {
     return PageView(children: [
       Scaffold(
         extendBodyBehindAppBar: true,
+        bottomNavigationBar: BottomBar(),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,

@@ -51,6 +51,7 @@ class _EditState extends State<Edit> {
                 head('Bio'),
                 element(
                   TextField(
+                    maxLength: 200,
                     controller: myController,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(bottom: -15),

@@ -1,4 +1,5 @@
 import 'package:conatus/models/appbar.dart';
+import 'package:conatus/models/bottomBar.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:conatus/models/query.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,8 @@ class Explore extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: appBar(),
-      drawer: Menu(),
+      bottomNavigationBar: BottomBar(),
+      //drawer: Menu(),
       body: bgTheme(
         SingleChildScrollView(
           child: Padding(

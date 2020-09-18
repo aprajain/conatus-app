@@ -1,5 +1,6 @@
 import 'package:conatus/home/profile/dp.dart';
 import 'package:conatus/models/appbar.dart';
+import 'package:conatus/models/bottomBar.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -108,7 +109,8 @@ class _ProfileState extends State<Profile> {
           )
         ],
       ),
-      drawer: Menu(),
+      //drawer: Menu(),
+      bottomNavigationBar: BottomBar(),
       body: bgTheme(
         SingleChildScrollView(
           child: Column(children: [
@@ -128,7 +130,7 @@ class _ProfileState extends State<Profile> {
             Text(
               'App Development',
               style: TextStyle(
-                color: Colors.grey[300],
+                color: Colors.grey[200],
                 fontSize: 21,
                 fontWeight: FontWeight.w400,
               ),
@@ -137,7 +139,7 @@ class _ProfileState extends State<Profile> {
             Text(
               '2nd Year IT',
               style: TextStyle(
-                color: Colors.grey[300],
+                color: Colors.grey[200],
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
               ),
