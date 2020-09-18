@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "834367885456",
+    "firebase_url": "https://conatus-2799e.firebaseio.com",
+    "project_id": "conatus-2799e",
+    "storage_bucket": "conatus-2799e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834367885456:android:8823a5282ae1b256218815",
+        "android_client_info": {
+          "package_name": "com.example.conatus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834367885456-h6v66skr80silpl7sti6ka8nvkv5b700.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.conatus",
+            "certificate_hash": "801aa946aeb08448a6c62418b41a4fc73bae8580"
+          }
+        },
+        {
+          "client_id": "834367885456-acuc1d76erq8qr3etra8qtle6ksjanbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlP6lxo2DpzwqtlsBE4CkRqrQ_ed1P06Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834367885456-acuc1d76erq8qr3etra8qtle6ksjanbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
