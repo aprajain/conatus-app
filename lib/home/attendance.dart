@@ -51,7 +51,7 @@ class _AttendanceState extends State<Attendance> {
           SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Container(
-              margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+              margin: EdgeInsets.fromLTRB(10, 5, 10, 0),
               child: Column(
                 children: [
                   Container(
@@ -78,7 +78,6 @@ class _AttendanceState extends State<Attendance> {
                   day(true),
                   day(false),
                   day(true),
-                  day(false),
                   day(true),
                   day(false),
                 ],

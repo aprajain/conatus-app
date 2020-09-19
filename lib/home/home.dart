@@ -21,7 +21,22 @@ Widget menu(title, page, context) {
       GestureDetector(
           onTap: () => Navigator.push(
               context, MaterialPageRoute(builder: (context) => page)),
-          child: element(Center(child: elementText(title)))),
+          child: Container(
+              alignment: Alignment.center,
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.black45,
+              ),
+              child: Text(
+                title,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w500),
+              ))),
       SizedBox(height: 20),
     ],
   );
@@ -78,8 +93,26 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(height: 50),
                   menu('Attendance', Attendance(), context),
-                  menu('Explore', Explore(), context),
-                  menu('Profile', Profile(), context),
+                  //menu('Explore', Explore(), context),
+                  //menu('Profile', Profile(), context),
+
+                  element(Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.access_time),
+                          SizedBox(width: 6),
+                          elementText('Meeting today'),
+                        ],
+                      ),
+                      Text(
+                        '5:30 p.m.',
+                        style: TextStyle(color: Colors.red, fontSize: 17),
+                      )
+                    ],
+                  )),
+                  element(elementText('Check for events'))
                 ],
               ),
             ),

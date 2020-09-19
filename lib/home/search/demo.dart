@@ -57,23 +57,9 @@ class DemoProfile extends StatelessWidget {
               ),
             ),
             SizedBox(height: 5),
-            Text(
-              'App Development',
-              style: TextStyle(
-                color: Colors.grey[700],
-                fontSize: 21,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            info('Year and Branch'),
             SizedBox(height: 5),
-            Text(
-              '2nd Year IT',
-              style: TextStyle(
-                color: Colors.grey[700],
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            info('App Development'),
             SizedBox(height: 10),
             Divider(
               color: Colors.grey[400],

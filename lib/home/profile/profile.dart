@@ -90,133 +90,122 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.edit,
-            ),
-            onPressed: () {
-              //Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Edit()));
-            },
-          )
-        ],
-      ),
-      //drawer: Menu(),
-      bottomNavigationBar: BottomBar(),
-      body: bgTheme(
-        SingleChildScrollView(
-          child: Column(children: [
-            Exp(),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Apra Jain',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
-                fontWeight: FontWeight.w500,
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          title: Text('aprajain'),
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.edit,
               ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'App Development',
-              style: TextStyle(
-                color: Colors.grey[200],
-                fontSize: 21,
-                fontWeight: FontWeight.w400,
+              onPressed: () {
+                //Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Edit()));
+              },
+            )
+          ],
+        ),
+        //drawer: Menu(),
+        bottomNavigationBar: BottomBar(),
+        body: bgTheme(
+          SingleChildScrollView(
+            child: Column(children: [
+              Exp(),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              '2nd Year IT',
-              style: TextStyle(
-                color: Colors.grey[200],
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
+              Text(
+                'Apra Jain',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
-            ),
-            SizedBox(height: 10),
-            Divider(
-              color: Colors.grey[400],
-              height: 30,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 0, horizontal: 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          _urllaunch('mailto: apra.jain01@gmail.com');
-                        },
-                        child: customRow(Icons.mail, 'Email'),
-                      ),
-                      GestureDetector(
+              SizedBox(height: 5),
+              info('2nd Year IT'),
+              SizedBox(height: 5),
+              info('App Development'),
+              SizedBox(height: 10),
+              Divider(
+                color: Colors.grey[400],
+                height: 30,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
                           onTap: () {
-                            _urllaunch('tel: +918604601091');
+                            _urllaunch('mailto: apra.jain01@gmail.com');
                           },
-                          child: customRow(Icons.phone_android, 'Call')),
-                      GestureDetector(
-                        onTap: () {
-                          _urllaunch('https://www.github.com/aprajain');
-                        },
-                        child: customRow(
-                          FontAwesomeIcons.github,
-                          'Github',
+                          child: customRow(Icons.mail, 'Email'),
                         ),
-                      ),
-                    ],
-                  ),
-                  Divider(
-                    color: Colors.grey[400],
-                    height: 30,
-                  ),
-                  element(
-                    elementText(
-                        'pursuing Bachelor of Technology from AKGEC  |  Java  |  C#  |  Flutter'),
-                  ),
-                  element(Row(
-                    children: [
-                      elementText('Active Projects'),
-                      Spacer(),
-                      elementText('3')
-                    ],
-                  )),
-                  element(Row(
-                    children: [
-                      elementText('Projects Completed'),
-                      Spacer(),
-                      elementText('5'),
-                    ],
-                  )),
-                  element(Row(
-                    children: [
-                      elementText('For more information visit '),
-                      GestureDetector(
-                        onTap: () {
-                          _urllaunch(
-                              'https://github.com/aprajain?tab=repositories');
-                        },
-                        child: elementText('Github.'),
-                      ),
-                    ],
-                  )),
-                ],
+                        GestureDetector(
+                            onTap: () {
+                              _urllaunch('tel: +918604601091');
+                            },
+                            child: customRow(Icons.phone_android, 'Call')),
+                        GestureDetector(
+                          onTap: () {
+                            _urllaunch('https://www.github.com/aprajain');
+                          },
+                          child: customRow(
+                            FontAwesomeIcons.github,
+                            'Github',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      color: Colors.grey[400],
+                      height: 30,
+                    ),
+                    element(
+                      elementText(
+                          'Pursuing Bachelor of Technology from AKGEC  |  Java  |  C#  |  Flutter'),
+                    ),
+                    element(Row(
+                      children: [
+                        elementText('Active Projects'),
+                        Spacer(),
+                        elementText('3')
+                      ],
+                    )),
+                    element(Row(
+                      children: [
+                        elementText('Projects Completed'),
+                        Spacer(),
+                        elementText('5'),
+                      ],
+                    )),
+                    element(Row(
+                      children: [
+                        elementText('For more information visit '),
+                        GestureDetector(
+                          onTap: () {
+                            _urllaunch(
+                                'https://github.com/aprajain?tab=repositories');
+                          },
+                          child: elementText('Github.'),
+                        ),
+                      ],
+                    )),
+                  ],
+                ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
       ),
     );

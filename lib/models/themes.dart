@@ -8,10 +8,7 @@ Widget bgTheme(Widget body) {
     height: double.infinity,
     decoration: BoxDecoration(
       gradient: LinearGradient(colors: [
-        //CustomColor.BLUE,
-
         CustomColor.LTEAL,
-        //CustomColor.BLUE,
         CustomColor.DTEAL,
       ], begin: Alignment.topLeft, end: Alignment.bottomRight),
       // borderRadius: BorderRadius.only(
@@ -24,6 +21,7 @@ Widget bgTheme(Widget body) {
 
 Widget element(Widget body) {
   return Container(
+    alignment: Alignment.center,
     width: double.infinity,
     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
     padding: EdgeInsets.all(15),
@@ -42,10 +40,24 @@ Widget elementText(value) {
 }
 
 Widget header(title) {
-  return Text(title,
-      style: TextStyle(
-          fontSize: 28,
-          fontWeight: FontWeight.w600,
-          color: Colors.black,
-          shadows: [Shadow(color: Colors.black)]));
+  return Padding(
+    padding: const EdgeInsets.only(left: 10, bottom: 5),
+    child: Text(title,
+        style: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+            shadows: [Shadow(color: Colors.black)])),
+  );
+}
+
+Widget info(value) {
+  return Text(
+    value,
+    style: TextStyle(
+      color: Colors.grey[200],
+      fontSize: 21,
+      fontWeight: FontWeight.w400,
+    ),
+  );
 }
