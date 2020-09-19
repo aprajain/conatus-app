@@ -116,9 +116,8 @@ class _RegisterState extends State<Register> {
                                   }),
                               SizedBox(height: 20),
                               TextFormField(
-                                decoration: textDeco.copyWith(
-                                    hintText: 'Password',
-                                    labelText: 'Password'),
+                                decoration:
+                                    textDeco.copyWith(hintText: 'Password'),
                                 obscureText: true,
                                 validator: (val) => val.length < 6
                                     ? 'Password must have min 6 chars'
@@ -128,6 +127,7 @@ class _RegisterState extends State<Register> {
                                 },
                               ),
                               SizedBox(height: 20),
+
                               GestureDetector(
                                 child: Container(
                                     padding: EdgeInsets.symmetric(
