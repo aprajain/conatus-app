@@ -36,57 +36,71 @@ class _BottomBarState extends State<BottomBar> {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Home()));
             },
-            child: Icon(
-              FontAwesomeIcons.home,
-              color: Colors.black,
-              //size: 30,
+            child: Column(
+              children: [
+                Icon(
+                  FontAwesomeIcons.home,
+                  color: Colors.black,
+                  //size: 30,
+                ),
+                Text(
+                  'Home',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                )
+              ],
             ),
           ),
-          title: Text(
-            'Home',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+          title: Container(),
         ),
         BottomNavigationBarItem(
-          icon: GestureDetector(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Explore()));
-              },
-              child: Icon(
-                FontAwesomeIcons.search,
-                color: Colors.black,
-                //size: 30,
-              )),
-          title: Text(
-            'Explore',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
+            icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Explore()));
+                },
+                child: Column(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.search,
+                      color: Colors.black,
+                      //size: 30,
+                    ),
+                    Text(
+                      'Explore',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                )),
+            title: Container()),
         BottomNavigationBarItem(
           icon: GestureDetector(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Profile()));
               },
-              child: Icon(
-                FontAwesomeIcons.solidUserCircle,
-                color: Colors.black,
-                //size: 30,
+              child: Column(
+                children: [
+                  Icon(
+                    FontAwesomeIcons.solidUserCircle,
+                    color: Colors.black,
+                    //size: 30,
+                  ),
+                  Text(
+                    'Profile',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  )
+                ],
               )),
-          title: Text(
-            'Profile',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+          title: Container(),
         ),
       ],
     );

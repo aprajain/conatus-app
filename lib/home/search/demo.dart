@@ -1,3 +1,4 @@
+import 'package:conatus/home/profile/customwidgets.dart';
 import 'package:conatus/models/appbar.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:flutter/material.dart';
@@ -6,22 +7,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class DemoProfile extends StatelessWidget {
   final String name;
   DemoProfile({this.name});
-
-  Widget customRow(IconData icon, title) {
-    return Row(
-      children: [
-        Icon(icon),
-        SizedBox(width: 6),
-        Text(
-          title,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-          ),
-        ),
-      ],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,10 +46,7 @@ class DemoProfile extends StatelessWidget {
             SizedBox(height: 5),
             info('App Development'),
             SizedBox(height: 10),
-            Divider(
-              color: Colors.grey[400],
-              height: 30,
-            ),
+            divider(),
             Container(
               margin: EdgeInsets.symmetric(vertical: 0, horizontal: 8),
               child: Column(
@@ -89,10 +71,7 @@ class DemoProfile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Divider(
-                    color: Colors.grey[400],
-                    height: 30,
-                  ),
+                  divider(),
                   element(
                     elementText(
                         'pursuing Bachelor of Technology from AKGEC  |  Java  |  C#  |  Flutter'),

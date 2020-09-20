@@ -4,7 +4,7 @@ import 'package:conatus/models/themes.dart';
 import 'package:conatus/models/query.dart';
 import 'package:flutter/material.dart';
 
-import 'drawer.dart';
+import '../models/drawer.dart';
 import 'search/members.dart';
 
 class Explore extends StatelessWidget {

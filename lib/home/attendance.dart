@@ -3,7 +3,7 @@ import 'package:conatus/models/bottomBar.dart';
 import 'package:conatus/models/themes.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'drawer.dart';
+import '../models/drawer.dart';
 import 'package:flutter/material.dart';
 
 class Attendance extends StatefulWidget {
@@ -55,12 +55,14 @@ class _AttendanceState extends State<Attendance> {
               child: Column(
                 children: [
                   Container(
-                      margin: EdgeInsets.fromLTRB(3, 5, 3, 15),
-                      padding: EdgeInsets.all(25),
+                      alignment: Alignment.center,
                       width: double.infinity,
+                      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                      padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.grey[600]),
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.black45,
+                      ),
                       child: Center(
                         child: Text(
                           'MARK ATTENDANCE HERE',

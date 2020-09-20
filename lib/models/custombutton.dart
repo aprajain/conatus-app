@@ -16,17 +16,3 @@ Widget saveButton(title) {
     ),
   );
 }
-
-Widget customButton(title) {
-  return Container(
-    //alignment: Alignment.center,
-    padding: EdgeInsets.all(20),
-    decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        gradient:
-            LinearGradient(colors: [Colors.green[400], Colors.lightBlue])),
-    child: Text(title,
-        style: TextStyle(
-            color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25)),
-  );
-}

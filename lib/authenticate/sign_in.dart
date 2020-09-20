@@ -65,8 +65,8 @@ class _SignInState extends State<SignIn> {
                         ),
                         Positioned(
                           bottom: -50,
-                          left: 130,
-                          right: 130,
+                          left: MediaQuery.of(context).size.width * 0.32,
+                          right: MediaQuery.of(context).size.width * 0.32,
                           child: Container(
                             decoration: BoxDecoration(
                               border: Border.all(
@@ -94,7 +94,7 @@ class _SignInState extends State<SignIn> {
                             SizedBox(height: 20),
                             TextFormField(
                                 decoration:
-                                    textDeco.copyWith(hintText: 'Email'),
+                                    textDeco.copyWith(labelText: 'Email'),
                                 validator: (val) =>
                                     val.isEmpty ? 'Enter an email' : null,
                                 onChanged: (val) {
@@ -103,7 +103,7 @@ class _SignInState extends State<SignIn> {
                             SizedBox(height: 20),
                             TextFormField(
                               decoration:
-                                  textDeco.copyWith(hintText: 'Password'),
+                                  textDeco.copyWith(labelText: 'Password'),
                               obscureText: true,
                               validator: (val) => val.length < 6
                                   ? 'Password must have min 6 chars'

@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../drawer.dart';
+import '../../models/drawer.dart';
+import 'customwidgets.dart';
 import 'editprofile.dart';
 
 class Profile extends StatefulWidget {
@@ -23,69 +24,6 @@ class _ProfileState extends State<Profile> {
     } else {
       throw 'could not launch $url';
     }
-  }
-
-  Widget customRow(IconData icon, title) {
-    return Row(
-      children: [
-        Icon(icon),
-        SizedBox(width: 6),
-        Text(
-          title,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget skills(value) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 10),
-      child: Row(
-        children: [
-          CircleAvatar(
-            backgroundColor: Colors.lightBlue[200],
-            radius: 6.0,
-          ),
-          SizedBox(width: 10),
-          Text(
-            value,
-            style: TextStyle(
-              color: Colors.black87,
-              fontWeight: FontWeight.w400,
-              fontSize: 20.0,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget headers(title) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
-      width: double.infinity,
-      color: Colors.grey[400],
-      child: Text(
-        title,
-        style: TextStyle(
-          color: Colors.blueGrey[800],
-          fontSize: 22.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
-
-  Widget divider() {
-    return Divider(
-      height: 50.0,
-      color: Colors.lightBlue[200],
-      thickness: 2.0,
-    );
   }
 
   @override
@@ -133,10 +71,7 @@ class _ProfileState extends State<Profile> {
               SizedBox(height: 5),
               info('App Development'),
               SizedBox(height: 10),
-              Divider(
-                color: Colors.grey[400],
-                height: 30,
-              ),
+              divider(),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 0, horizontal: 8),
                 child: Column(
@@ -167,10 +102,7 @@ class _ProfileState extends State<Profile> {
                         ),
                       ],
                     ),
-                    Divider(
-                      color: Colors.grey[400],
-                      height: 30,
-                    ),
+                    divider(),
                     element(
                       elementText(
                           'Pursuing Bachelor of Technology from AKGEC  |  Java  |  C#  |  Flutter'),
